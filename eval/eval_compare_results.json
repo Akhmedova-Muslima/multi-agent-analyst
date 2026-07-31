@@ -1,0 +1,216 @@
+{
+  "with_critic": [
+    {
+      "id": 1,
+      "question": "Сколько клиентов ушло в Q3?",
+      "category": "data",
+      "answer": "В третьем квартале (Q3) ушло 140 клиентов.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 2,
+      "question": "Какая выручка была в Q4?",
+      "category": "data",
+      "answer": "Выручка в Q4 составила 610 000.0.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 3,
+      "question": "Сколько клиентов ушло в Q1?",
+      "category": "data",
+      "answer": "В первом квартале (Q1) ушло 120 клиентов.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 4,
+      "question": "Какая выручка была в Q2?",
+      "category": "data",
+      "answer": "Выручка в Q2 составила 520 000.0.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 5,
+      "question": "Расскажи о компании",
+      "category": "retriever",
+      "answer": "Основным продуктом компании является AI Analyst Pro. В третьем квартале (Q3) наблюдался рост оттока клиентов, связанный с обновлением ценовой политики.\n\nПолитика возврата средств предусматривает возможность получения полного возврата в течение 14 дней с момента покупки. По всем вопросам можно обращаться в службу поддержки по адресу support@company.com.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 6,
+      "question": "Как связаться со службой поддержки?",
+      "category": "retriever",
+      "answer": "Вы можете связаться со службой поддержки по электронной почте: support@company.com.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 7,
+      "question": "Какая политика возврата средств?",
+      "category": "retriever",
+      "answer": "Согласно политике компании, полный возврат средств возможен в течение 14 дней с момента покупки.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 8,
+      "question": "Посчитай средний revenue за все кварталы",
+      "category": "data+code",
+      "answer": "Средний revenue за все кварталы составляет 515000.0.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 9,
+      "question": "Напиши Python-код, который посчитает суммарный отток клиентов за все кварталы",
+      "category": "data+code",
+      "answer": "Суммарный отток клиентов за все кварталы составляет 440.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 10,
+      "question": "Какой квартал был самым прибыльным по revenue?",
+      "category": "data",
+      "answer": "Самым прибыльным кварталом был Q4 с доходом 610 000.0.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 11,
+      "question": "Сколько всего клиентов в базе (активных и ушедших)?",
+      "category": "data",
+      "answer": "В базе всего 4 клиента.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    }
+  ],
+  "without_critic": [
+    {
+      "id": 1,
+      "question": "Сколько клиентов ушло в Q3?",
+      "category": "data",
+      "answer": "В третьем квартале (Q3) ушло 140 клиентов.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 2,
+      "question": "Какая выручка была в Q4?",
+      "category": "data",
+      "answer": "Выручка в Q4 составила 610 000.0.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 3,
+      "question": "Сколько клиентов ушло в Q1?",
+      "category": "data",
+      "answer": "В первом квартале (Q1) ушло 120 клиентов.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 4,
+      "question": "Какая выручка была в Q2?",
+      "category": "data",
+      "answer": "Выручка в Q2 составила 520 000.0.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 5,
+      "question": "Расскажи о компании",
+      "category": "retriever",
+      "answer": "Основным продуктом компании является AI Analyst Pro. В третьем квартале (Q3) наблюдался рост оттока клиентов, связанный с обновлением ценовой политики.\n\nКомпания предоставляет возможность полного возврата средств в течение 14 дней с момента покупки. По вопросам поддержки можно обращаться по электронной почте support@company.com.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 6,
+      "question": "Как связаться со службой поддержки?",
+      "category": "retriever",
+      "answer": "Связаться со службой поддержки можно по электронной почте: support@company.com.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 7,
+      "question": "Какая политика возврата средств?",
+      "category": "retriever",
+      "answer": "Согласно политике компании, полный возврат средств доступен в течение 14 дней с момента покупки.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 8,
+      "question": "Посчитай средний revenue за все кварталы",
+      "category": "data+code",
+      "answer": "Средний revenue за все кварталы составляет 515000.0.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 9,
+      "question": "Напиши Python-код, который посчитает суммарный отток клиентов за все кварталы",
+      "category": "data+code",
+      "answer": "Суммарный отток клиентов за все кварталы составляет 440.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 10,
+      "question": "Какой квартал был самым прибыльным по revenue?",
+      "category": "data",
+      "answer": "Самым прибыльным кварталом был Q4 с доходом 610 000.0.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    },
+    {
+      "id": 11,
+      "question": "Сколько всего клиентов в базе (активных и ушедших)?",
+      "category": "data",
+      "answer": "В базе всего 4 клиента.",
+      "correctness": 5,
+      "groundedness": 5,
+      "relevance": 5
+    }
+  ],
+  "summary": {
+    "with_critic": {
+      "correctness": 5.0,
+      "groundedness": 5.0,
+      "relevance": 5.0
+    },
+    "without_critic": {
+      "correctness": 5.0,
+      "groundedness": 5.0,
+      "relevance": 5.0
+    }
+  }
+}

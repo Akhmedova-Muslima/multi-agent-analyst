@@ -1,0 +1,119 @@
+:root {
+  --bg: #0a0b0d;
+  --panel: #121417;
+  --panel-2: #16191d;
+  --border: #23262b;
+  --text: #e7e9ec;
+  --muted: #7d8590;
+  --accent: #7dd3fc;      /* активный узел / processing */
+  --success: #34d399;     /* approved */
+  --warning: #fbbf24;     /* revision loop */
+  --error: #f87171;       /* ошибка */
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono), "SFMono-Regular", Consolas, monospace;
+  font-size: 14px;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(125, 211, 252, 0.06), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(52, 211, 153, 0.05), transparent 40%);
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: #06222c;
+}
+
+/* ---------- graph nodes ---------- */
+
+.node-shape {
+  fill: var(--panel);
+  stroke: var(--border);
+  stroke-width: 1.5;
+  transition: fill 0.25s ease, stroke 0.25s ease, filter 0.25s ease;
+}
+
+.node-label {
+  fill: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+  transition: fill 0.25s ease;
+}
+
+.node[data-state="done"] .node-shape {
+  stroke: var(--accent);
+}
+.node[data-state="done"] .node-label {
+  fill: var(--text);
+}
+
+.node[data-state="active"] .node-shape {
+  stroke: var(--accent);
+  fill: #0d2733;
+  filter: drop-shadow(0 0 8px rgba(125, 211, 252, 0.55));
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.node[data-state="active"] .node-label {
+  fill: var(--accent);
+}
+
+.node[data-state="approved"] .node-shape {
+  stroke: var(--success);
+  fill: #0d2b20;
+  filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.5));
+}
+.node[data-state="approved"] .node-label {
+  fill: var(--success);
+}
+
+.node[data-state="revise"] .node-shape {
+  stroke: var(--warning);
+  fill: #2b220a;
+}
+.node[data-state="revise"] .node-label {
+  fill: var(--warning);
+}
+
+@keyframes pulse {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(125, 211, 252, 0.35)); }
+  50% { filter: drop-shadow(0 0 12px rgba(125, 211, 252, 0.75)); }
+}
+
+.edge {
+  stroke: var(--border);
+  stroke-width: 1.5;
+  fill: none;
+  transition: stroke 0.25s ease, stroke-width 0.25s ease;
+}
+.edge[data-active="true"] {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.edge[data-loop="true"] {
+  stroke-dasharray: 4 4;
+}
+.edge[data-loop="true"][data-active="true"] {
+  stroke: var(--warning);
+}

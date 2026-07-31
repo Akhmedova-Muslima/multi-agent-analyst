@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "question": "Сколько клиентов ушло в Q3?",
+      "reference_answer": "140 клиентов",
+      "category": "data"
+    },
+    {
+      "id": 2,
+      "question": "Какая выручка была в Q4?",
+      "reference_answer": "610000",
+      "category": "data"
+    },
+    {
+      "id": 3,
+      "question": "Сколько клиентов ушло в Q1?",
+      "reference_answer": "120 клиентов",
+      "category": "data"
+    },
+    {
+      "id": 4,
+      "question": "Какая выручка была в Q2?",
+      "reference_answer": "520000",
+      "category": "data"
+    },
+    {
+      "id": 5,
+      "question": "Расскажи о компании",
+      "reference_answer": "Основной продукт AI Analyst Pro, email поддержки support@company.com, возврат средств в течение 14 дней, в Q3 вырос отток клиентов из-за обновления ценовой политики",
+      "category": "retriever"
+    },
+    {
+      "id": 6,
+      "question": "Как связаться со службой поддержки?",
+      "reference_answer": "support@company.com",
+      "category": "retriever"
+    },
+    {
+      "id": 7,
+      "question": "Какая политика возврата средств?",
+      "reference_answer": "Полный возврат в течение 14 дней с момента покупки",
+      "category": "retriever"
+    },
+    {
+      "id": 8,
+      "question": "Посчитай средний revenue за все кварталы",
+      "reference_answer": "515000",
+      "category": "data+code"
+    },
+    {
+      "id": 9,
+      "question": "Напиши Python-код, который посчитает суммарный отток клиентов за все кварталы",
+      "reference_answer": "440 клиентов (120+85+140+95)",
+      "category": "data+code"
+    },
+    {
+      "id": 10,
+      "question": "Какой квартал был самым прибыльным по revenue?",
+      "reference_answer": "Q4 с revenue 610000",
+      "category": "data"
+    },
+    {
+      "id": 11,
+      "question": "Сколько всего клиентов в базе (активных и ушедших)?",
+      "reference_answer": "4 клиента (Alice, Bob, Charlie, Diana)",
+      "category": "data"
+    }
+  ]

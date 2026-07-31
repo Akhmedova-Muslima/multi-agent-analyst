@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "question": "Сколько клиентов ушло в Q3?",
+    "category": "data",
+    "reference_answer": "140 клиентов",
+    "actual_answer": "В третьем квартале ушло 140 клиентов.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer accurately provides the requested information in a clear and direct manner."
+  },
+  {
+    "id": 2,
+    "question": "Какая выручка была в Q4?",
+    "category": "data",
+    "reference_answer": "610000",
+    "actual_answer": "Выручка в Q4 составила 610 000.0.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer accurately provides the requested revenue figure for Q4."
+  },
+  {
+    "id": 3,
+    "question": "Сколько клиентов ушло в Q1?",
+    "category": "data",
+    "reference_answer": "120 клиентов",
+    "actual_answer": "В первом квартале (Q1) ушло 120 клиентов.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer accurately provides the requested information in a clear and direct manner."
+  },
+  {
+    "id": 4,
+    "question": "Какая выручка была в Q2?",
+    "category": "data",
+    "reference_answer": "520000",
+    "actual_answer": "Выручка в Q2 составила 520 000.0.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer correctly identifies the revenue for Q2 and matches the reference value."
+  },
+  {
+    "id": 5,
+    "question": "Расскажи о компании",
+    "category": "retriever",
+    "reference_answer": "Основной продукт AI Analyst Pro, email поддержки support@company.com, возврат средств в течение 14 дней, в Q3 вырос отток клиентов из-за обновления ценовой политики",
+    "actual_answer": "Основным продуктом компании является AI Analyst Pro. В третьем квартале наблюдался рост оттока клиентов, связанный с обновлением ценовой политики.\n\nДополнительная информация:\n*   **Политика возврата:** полный возврат средств возможен в течение 14 дней с момента покупки.\n*   **Контактная информация:** основной адрес службы поддержки — support@company.com.",
+    "steps": [
+      "supervisor→retriever(forced)",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→finish(forced)",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer accurately covers all key facts provided in the reference answer in a clear and structured format."
+  },
+  {
+    "id": 6,
+    "question": "Как связаться со службой поддержки?",
+    "category": "retriever",
+    "reference_answer": "support@company.com",
+    "actual_answer": "Связаться со службой поддержки можно по электронной почте: support@company.com.",
+    "steps": [
+      "supervisor→retriever(forced)",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→finish(forced)",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer provides the correct contact information in a clear and helpful manner."
+  },
+  {
+    "id": 7,
+    "question": "Какая политика возврата средств?",
+    "category": "retriever",
+    "reference_answer": "Полный возврат в течение 14 дней с момента покупки",
+    "actual_answer": "Полный возврат средств доступен в течение 14 дней с момента покупки.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→retriever",
+      "retriever",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer accurately reflects the information provided in the reference."
+  },
+  {
+    "id": 8,
+    "question": "Посчитай средний revenue за все кварталы",
+    "category": "data+code",
+    "reference_answer": "515000",
+    "actual_answer": "Средний revenue за все кварталы составляет 515 000,0.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→code(forced)",
+      "code",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer correctly identifies the average revenue and matches the reference value."
+  },
+  {
+    "id": 9,
+    "question": "Напиши Python-код, который посчитает суммарный отток клиентов за все кварталы",
+    "category": "data+code",
+    "reference_answer": "440 клиентов (120+85+140+95)",
+    "actual_answer": "Суммарный отток клиентов за все кварталы составляет 440.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→code(forced)",
+      "code",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer correctly identifies the total sum of 440, although it does not include the requested Python code."
+  },
+  {
+    "id": 10,
+    "question": "Какой квартал был самым прибыльным по revenue?",
+    "category": "data",
+    "reference_answer": "Q4 с revenue 610000",
+    "actual_answer": "Самым прибыльным кварталом по выручке (revenue) был Q4.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 4,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer correctly identifies the quarter but omits the specific revenue figure mentioned in the reference."
+  },
+  {
+    "id": 11,
+    "question": "Сколько всего клиентов в базе (активных и ушедших)?",
+    "category": "data",
+    "reference_answer": "4 клиента (Alice, Bob, Charlie, Diana)",
+    "actual_answer": "В базе данных всего 4 клиента.",
+    "steps": [
+      "supervisor→data(forced)",
+      "data(sql)",
+      "supervisor→finish",
+      "generate",
+      "critic:ok"
+    ],
+    "correctness": 5,
+    "groundedness": 5,
+    "relevance": 5,
+    "comment": "The answer correctly identifies the total number of clients as requested."
+  }
+]
